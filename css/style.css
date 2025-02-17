@@ -6094,7 +6094,7 @@ a.close.disabled {
 }
 
 .bg-primary {
-  background-color: #FF4800 !important;
+  background-color: #0000FF !important;
 }
 
 a.bg-primary:hover, a.bg-primary:focus,
@@ -6222,7 +6222,7 @@ button.bg-dark:focus {
 }
 
 .border-primary {
-  border-color: #FF4800 !important;
+  border-color: #0000FF !important;
 }
 
 .border-secondary {
@@ -9264,7 +9264,7 @@ button.bg-dark:focus {
 }
 
 .text-primary {
-  color: #FF4800 !important;
+  color: #0000FF !important;
 }
 
 a.text-primary:hover, a.text-primary:focus {
@@ -9532,7 +9532,7 @@ p,
 .navbar-light .navbar-nav .nav-link:hover,
 .navbar-light .navbar-nav .nav-link.active {
   color: #FFFFFF;
-  background: #FF4800;
+  background: #0000FF;
 }
 
 @media (max-width: 991.98px) {
@@ -9585,7 +9585,7 @@ p,
   display: block;
   width: 60px;
   height: 60px;
-  background: #FF4800;
+  background: #0000FF;
   border-radius: 50%;
   transition: all 200ms;
 }
@@ -9652,7 +9652,7 @@ p,
   height: 100px;
   bottom: 0px;
   left: 0;
-  border-bottom: 5px solid #FF4800;
+  border-bottom: 5px solid #0000FF;
   transition: .5s;
 }
 
@@ -9696,7 +9696,7 @@ p,
 }
 
 .testimonial-carousel .owl-dot.active {
-  background: #FF4800;
+  background: #0000FF;
 }
 
 .contact-form .help-block ul {
