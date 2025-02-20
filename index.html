@@ -23,7 +23,90 @@
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
     <!-- Customized Bootstrap Stylesheet -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        /* Custom CSS for animations and card styling */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .card {
+            animation: fadeIn 0.5s ease-in-out;
+            margin-bottom: 20px;
+            border: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 400px; /* Fixed height for all cards */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-header {
+            background-color: #0000FF;
+            color: white;
+            border-bottom: none;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .card-body {
+            padding: 20px;
+            flex: 1; /* Allow the body to grow and fill the remaining space */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card-title {
+            margin-bottom: 15px;
+            font-size: 1.25rem;
+            font-weight: bold;
+        }
+
+        .card-text {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin-bottom: 20px; /* Space between text and button */
+        }
+
+        .card-footer {
+            text-align: center;
+            padding: 10px;
+            background-color: transparent;
+            border-top: none;
+        }
+
+        .btn-read-more {
+            background-color: #0000FF;
+            color: white;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            text-decoration: none; /* Remove underline from link */
+            display: inline-block; /* Make the link behave like a button */
+        }
+
+        .btn-read-more:hover {
+            background-color: #0056b3;
+            color: white;
+            text-decoration: none; /* Ensure no underline on hover */
+        }
+    </style>
 </head>
 
 <body>
@@ -155,101 +238,165 @@
     
 
     <!-- Services Start -->
-<div class="container-fluid pt-5">
-    <div class="container">
-        <div class="text-center pb-2">
-            <h6 class="text-primary text-uppercase font-weight-bold">Our Services</h6>
-            <h1 class="mb-4">Best Logistic Services</h1>
-        </div>
-        <div class="row pb-3">
-            <div class="col-lg-3 col-md-6 text-center mb-5">
-                <div class="d-flex align-items-center justify-content-center bg-primary mb-4 p-4">
-                    <!-- <i class="fa fa-2x fa-plane text-dark pr-3"></i> -->
-                    <h6 class="text-white font-weight-medium m-0">Freight & Logistics Solutions</h6>
-                </div>
-                <p class="text-justify">We offer a range of freight and logistics services, including door-to-door, door-to-port, and port-to-port shipping, tailored to meet your needs. Whether you're shipping domestically or internationally, we ensure your goods are transported safely, on time, and in the most efficient manner possible.</p>
-                <!-- <a class="border-bottom text-decoration-none" href="">Read More</a> -->
+    <div class="container-fluid pt-5">
+        <div class="container">
+            <div class="text-center pb-2">
+                <h6 class="text-primary text-uppercase font-weight-bold">Our Services</h6>
+                <h1 class="mb-4">Best Logistic Services</h1>
             </div>
-            <div class="col-lg-3 col-md-6 text-center mb-5">
-                <div class="d-flex align-items-center justify-content-center bg-primary mb-4 p-4">
-                    <!-- <i class="fa fa-2x fa-ship text-dark pr-3"></i> -->
-                    <h6 class="text-white font-weight-medium m-0">Nationwide & Global Customs Clearance</h6>
+            <div class="row pb-3">
+                <!-- Freight & Logistics Solutions -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h6 class="text-white font-weight-medium m-0">Freight & Logistics Solutions</h6>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">We offer door-to-door, port-to-port, and international shipping services tailored to your needs.</p>
+                            <div class="card-footer">
+                                <a href="service.html#freight-logistics" class="btn-read-more">Read More</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <p class="text-justify">Our experienced team handles all aspects of customs clearance, ensuring smooth and hassle-free processing for your international shipments. With expertise in both nationwide and global customs regulations, we help you avoid delays and unnecessary costs.</p>
-                <!-- <a class="border-bottom text-decoration-none" href="">Read More</a> -->
-            </div>
-            <div class="col-lg-3 col-md-6 text-center mb-5">
-                <div class="d-flex align-items-center justify-content-center bg-primary mb-4 p-4">
-                    <!-- <i class="fa fa-2x fa-truck text-dark pr-3"></i> -->
-                    <h6 class="text-white font-weight-medium m-0">Full Bonded Customs Warehousing</h6>
+
+                <!-- Nationwide & Global Customs Clearance -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h6 class="text-white font-weight-medium m-0">Nationwide & Global Customs Clearance</h6>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">We handle customs clearance for smooth and hassle-free international shipments.</p>
+                            <div class="card-footer">
+                                <a href="service.html#customs-clearance" class="btn-read-more">Read More</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <p class="text-justify">We provide secure and compliant warehousing solutions for your goods before customs duties are paid. Our bonded warehouses ensure that your goods are stored safely, and you only pay duties when necessary, reducing your logistics costs.</p>
-                <!-- <a class="border-bottom text-decoration-none" href="">Read More</a> -->
-            </div>
-            <div class="col-lg-3 col-md-6 text-center mb-5">
-                <div class="d-flex align-items-center justify-content-center bg-primary mb-4 p-4">
-                    <!-- <i class="fa fa-2x fa-store text-dark pr-3"></i> -->
-                    <h6 class="text-white font-weight-medium m-0">Temperature Controlled Facility</h6>
+
+                <!-- Full Bonded Customs Warehousing -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h6 class="text-white font-weight-medium m-0">Full Bonded Customs Warehousing</h6>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Secure warehousing solutions for goods before customs duties are paid.</p>
+                            <div class="card-footer">
+                                <a href="service.html#bonded-warehousing" class="btn-read-more">Read More</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <p class="text-justify">For sensitive and perishable goods, we offer temperature-controlled facilities. This ensures that your products are kept at the ideal conditions during storage and transportation, preserving their quality and safety.</p>
-                <!-- <a class="border-bottom text-decoration-none" href="">Read More</a> -->
-            </div>
-            <div class="col-lg-3 col-md-6 text-center mb-5">
-                <div class="d-flex align-items-center justify-content-center bg-primary mb-4 p-4">
-                    <!-- <i class="fa fa-2x fa-store text-dark pr-3"></i> -->
-                    <h6 class="text-white font-weight-medium m-0">E-Commerce Customs Services</h6>
+
+                <!-- Temperature Controlled Facility -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h6 class="text-white font-weight-medium m-0">Temperature Controlled Facility</h6>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Ideal for sensitive and perishable goods, ensuring quality and safety.</p>
+                            <div class="card-footer">
+                                <a href="service.html#temperature-controlled" class="btn-read-more">Read More</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <p class="text-justify">We specialize in providing streamlined customs solutions for e-commerce businesses. Whether you're shipping products locally or internationally, we make sure your shipments comply with customs regulations and reach your customers smoothly.</p>
-                <!-- <a class="border-bottom text-decoration-none" href="">Read More</a> -->
-            </div>
-            <div class="col-lg-3 col-md-6 text-center mb-5">
-                <div class="d-flex align-items-center justify-content-center bg-primary mb-4 p-4">
-                    <!-- <i class="fa fa-2x fa-store text-dark pr-3"></i> -->
-                    <h6 class="text-white font-weight-medium m-0">Transshipment in Bond</h6>
+
+                <!-- E-Commerce Customs Services -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h6 class="text-white font-weight-medium m-0">E-Commerce Customs Services</h6>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Streamlined customs solutions for e-commerce businesses shipping locally or globally.</p>
+                            <div class="card-footer">
+                                <a href="service.html#ecommerce-customs" class="btn-read-more">Read More</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <p class="text-justify">We provide efficient transshipment services for goods in transit, minimizing storage time and reducing the costs associated with transferring goods across customs territories. This service is ideal for shipments that need to pass through multiple locations.</p>
-                <!-- <a class="border-bottom text-decoration-none" href="">Read More</a> -->
-            </div>
-            <div class="col-lg-3 col-md-6 text-center mb-5">
-                <div class="d-flex align-items-center justify-content-center bg-primary mb-4 p-4">
-                    <!-- <i class="fa fa-2x fa-store text-dark pr-3"></i> -->
-                    <h6 class="text-white font-weight-medium m-0">Sea Freight Chartering</h6>
+
+                <!-- Transshipment in Bond -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h6 class="text-white font-weight-medium m-0">Transshipment in Bond</h6>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Efficient transshipment services to minimize storage time and reduce costs.</p>
+                            <div class="card-footer">
+                                <a href="service.html#transshipment" class="btn-read-more">Read More</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <p class="text-justify">For bulk cargo shipments, we offer cost-effective sea freight chartering services. This solution is ideal for large-scale shipments, providing flexible and reliable options for ocean freight transport.</p>
-                <!-- <a class="border-bottom text-decoration-none" href="">Read More</a> -->
-            </div>
-            <div class="col-lg-3 col-md-6 text-center mb-5">
-                <div class="d-flex align-items-center justify-content-center bg-primary mb-4 p-4">
-                    <!-- <i class="fa fa-2x fa-store text-dark pr-3"></i> -->
-                    <h6 class="text-white font-weight-medium m-0">Cross Docking Facility</h6>
+
+                <!-- Sea Freight Chartering -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h6 class="text-white font-weight-medium m-0">Sea Freight Chartering</h6>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Cost-effective sea freight solutions for bulk cargo shipments.</p>
+                            <div class="card-footer">
+                                <a href="service.html#sea-freight" class="btn-read-more">Read More</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <p class="text-justify">Cross Docking Facility at Felixstowe Port
-                    We offer a cross-docking facility at Felixstowe Port, designed to minimize storage time and optimize your logistics process. Goods are quickly transferred between vehicles or ships, reducing delays and improving efficiency.</p>
-                <!-- <a class="border-bottom text-decoration-none" href="">Read More</a> -->
-            </div>
-            <div class="col-lg-3 col-md-6 text-center mb-5">
-                <div class="d-flex align-items-center justify-content-center bg-primary mb-4 p-4">
-                    <!-- <i class="fa fa-2x fa-store text-dark pr-3"></i> -->
-                    <h6 class="text-white font-weight-medium m-0">Project Cargo, OOG (Out of Gauge), and Break Bulk</h6>
+
+                <!-- Cross Docking Facility -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h6 class="text-white font-weight-medium m-0">Cross Docking Facility</h6>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Minimize storage time and optimize logistics at Felixstowe Port.</p>
+                            <div class="card-footer">
+                                <a href="service.html#cross-docking" class="btn-read-more">Read More</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <p class="text-justify">We specialize in handling project cargo, oversized (OOG), and break bulk shipments. Our expert team ensures that large or non-standard cargo is transported with care, following all necessary protocols for safe delivery.</p>
-                <!-- <a class="border-bottom text-decoration-none" href="">Read More</a> -->
-            </div>
-            <div class="col-lg-3 col-md-6 text-center mb-5">
-                <div class="d-flex align-items-center justify-content-center bg-primary mb-4 p-4">
-                    <!-- <i class="fa fa-2x fa-store text-dark pr-3"></i> -->
-                    <h6 class="text-white font-weight-medium m-0">Ground & Rail Transportation Services</h6>
+
+                <!-- Project Cargo, OOG (Out of Gauge), and Break Bulk -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h6 class="text-white font-weight-medium m-0">Project Cargo, OOG, and Break Bulk</h6>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Specialized handling for oversized and non-standard cargo shipments.</p>
+                            <div class="card-footer">
+                                <a href="service.html#project-cargo" class="btn-read-more">Read More</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <p class="text-justify">We provide efficient ground and rail transportation solutions for both domestic and international shipments. Our services include Full Truck-Load (FTL) and Part-Load (LTL) transport, as well as specialized solutions for oversized, heavy, or valuable goods. We also offer low-carbon rail and barge solutions for long-distance and eco-friendly shipping.</p>
-                <!-- <a class="border-bottom text-decoration-none" href="">Read More</a> -->
+
+                <!-- Ground & Rail Transportation Services -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h6 class="text-white font-weight-medium m-0">Ground & Rail Transportation</h6>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Efficient ground and rail solutions for domestic and international shipments.</p>
+                            <div class="card-footer">
+                                <a href="service.html#ground-rail" class="btn-read-more">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-        </div>
-        </div>
-        </div>
         </div>
     </div>
-</div>
 <!-- Services End -->
 
     <!--  Quote Request Start -->
@@ -875,6 +1022,9 @@
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/waypoints/waypoints.min.js"></script>
